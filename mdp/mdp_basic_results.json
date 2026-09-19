@@ -1,0 +1,462 @@
+{
+  "benchmarks": [
+    {
+      "runs": [
+        {
+          "metadata": {
+            "calibrate_loops": 1,
+            "date": "2026-09-18 12:53:03.803281",
+            "duration": 39.64387460099897,
+            "load_avg_1min": 0.75,
+            "mem_max_rss": 31539200,
+            "uptime": 9362.805559873581
+          },
+          "warmups": [
+            [
+              1,
+              9.992834249000225
+            ],
+            [
+              1,
+              9.916185381000105
+            ],
+            [
+              1,
+              9.854827220000516
+            ],
+            [
+              1,
+              9.85406986900125
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:53:43.420015",
+            "duration": 39.37269860699962,
+            "load_avg_1min": 0.87,
+            "mem_max_rss": 31293440,
+            "uptime": 9402.42217707634
+          },
+          "values": [
+            9.850221005999629,
+            9.812632481998662,
+            9.830877106998742
+          ],
+          "warmups": [
+            [
+              1,
+              9.866027334999671
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:54:22.774906",
+            "duration": 39.12757626500024,
+            "load_avg_1min": 0.94,
+            "mem_max_rss": 31293440,
+            "uptime": 9441.77709531784
+          },
+          "values": [
+            9.79037761500149,
+            9.791621951000707,
+            9.750307078000333
+          ],
+          "warmups": [
+            [
+              1,
+              9.782440984999994
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:55:02.176893",
+            "duration": 39.1752966210006,
+            "load_avg_1min": 0.97,
+            "mem_max_rss": 31715328,
+            "uptime": 9481.179006576538
+          },
+          "values": [
+            9.802984887999628,
+            9.787799009000082,
+            9.787853072000871
+          ],
+          "warmups": [
+            [
+              1,
+              9.78391763199943
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:55:41.792957",
+            "duration": 39.38994738900146,
+            "load_avg_1min": 0.99,
+            "mem_max_rss": 31621120,
+            "uptime": 9520.795050382614
+          },
+          "values": [
+            9.867038215999855,
+            9.828906280999945,
+            9.8276641750017
+          ],
+          "warmups": [
+            [
+              1,
+              9.853630912000881
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:56:21.108091",
+            "duration": 39.08925678199921,
+            "load_avg_1min": 0.99,
+            "mem_max_rss": 31518720,
+            "uptime": 9560.110170602798
+          },
+          "values": [
+            9.774879962000341,
+            9.76978366000003,
+            9.757930702999147
+          ],
+          "warmups": [
+            [
+              1,
+              9.774002729998756
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:57:00.953607",
+            "duration": 39.61862543800089,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31674368,
+            "uptime": 9599.955748558044
+          },
+          "values": [
+            9.923011021999628,
+            9.889534034999087,
+            9.89331235499958
+          ],
+          "warmups": [
+            [
+              1,
+              9.900023935999343
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:57:40.741990",
+            "duration": 39.56226198699915,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31367168,
+            "uptime": 9639.744099140167
+          },
+          "values": [
+            9.900276984999437,
+            9.874069604000397,
+            9.871634631999768
+          ],
+          "warmups": [
+            [
+              1,
+              9.903582695000296
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:58:20.283915",
+            "duration": 39.315969770001175,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31531008,
+            "uptime": 9679.28603219986
+          },
+          "values": [
+            9.843267315000048,
+            9.820812910998939,
+            9.822608308999406
+          ],
+          "warmups": [
+            [
+              1,
+              9.816545812000186
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:58:59.887743",
+            "duration": 39.37730532400019,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31531008,
+            "uptime": 9718.889925479889
+          },
+          "values": [
+            9.843390084999555,
+            9.838886375000584,
+            9.822960331999639
+          ],
+          "warmups": [
+            [
+              1,
+              9.859252829999605
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 12:59:39.052713",
+            "duration": 38.9386808700001,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31531008,
+            "uptime": 9758.054823160172
+          },
+          "values": [
+            9.747841510999933,
+            9.70557666700006,
+            9.723809170000095
+          ],
+          "warmups": [
+            [
+              1,
+              9.748791724001421
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:00:18.701144",
+            "duration": 39.422620532999645,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31531008,
+            "uptime": 9797.70355463028
+          },
+          "values": [
+            9.868446105998373,
+            9.855350033998548,
+            9.838576846999786
+          ],
+          "warmups": [
+            [
+              1,
+              9.846870888999547
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:00:59.116686",
+            "duration": 40.192741983000815,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31531008,
+            "uptime": 9838.120752334595
+          },
+          "values": [
+            10.073190735000026,
+            10.04684224399898,
+            10.01096002399936
+          ],
+          "warmups": [
+            [
+              1,
+              10.042801400000826
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:01:38.317158",
+            "duration": 38.96249844399972,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31719424,
+            "uptime": 9877.31935930252
+          },
+          "values": [
+            9.746018211999399,
+            9.725662574001035,
+            9.733798238001327
+          ],
+          "warmups": [
+            [
+              1,
+              9.743803301998923
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:02:17.798894",
+            "duration": 39.25420453799961,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31539200,
+            "uptime": 9916.80107140541
+          },
+          "values": [
+            9.808680354999524,
+            9.796737292001126,
+            9.804301722999298
+          ],
+          "warmups": [
+            [
+              1,
+              9.831222344000707
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:02:57.690807",
+            "duration": 39.66462723999939,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31592448,
+            "uptime": 9956.692944049835
+          },
+          "values": [
+            9.929245340999842,
+            9.908171347000462,
+            9.89837280500069
+          ],
+          "warmups": [
+            [
+              1,
+              9.91573735700149
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:03:37.162730",
+            "duration": 39.24542808200022,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31727616,
+            "uptime": 9996.164897441864
+          },
+          "values": [
+            9.818487640000967,
+            9.791183707999153,
+            9.80329210399941
+          ],
+          "warmups": [
+            [
+              1,
+              9.819700891999673
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:04:16.918399",
+            "duration": 39.52842855699964,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31604736,
+            "uptime": 10035.920591115952
+          },
+          "values": [
+            9.885564963999059,
+            9.873274403000323,
+            9.87091067899928
+          ],
+          "warmups": [
+            [
+              1,
+              9.885887389000345
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:04:56.274177",
+            "duration": 39.12924100999953,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31285248,
+            "uptime": 10075.276297807693
+          },
+          "values": [
+            9.77765706900027,
+            9.772840198000267,
+            9.774411201000476
+          ],
+          "warmups": [
+            [
+              1,
+              9.791656778001197
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:05:35.978514",
+            "duration": 39.477712597999925,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31617024,
+            "uptime": 10114.981143951416
+          },
+          "values": [
+            9.86824646199966,
+            9.855251823999424,
+            9.844805579999957
+          ],
+          "warmups": [
+            [
+              1,
+              9.895740926000144
+            ]
+          ]
+        },
+        {
+          "metadata": {
+            "date": "2026-09-18 13:06:15.527036",
+            "duration": 39.3236797669997,
+            "load_avg_1min": 1.0,
+            "mem_max_rss": 31674368,
+            "uptime": 10154.530663251877
+          },
+          "values": [
+            9.837559166000574,
+            9.804063897998276,
+            9.817729088001215
+          ],
+          "warmups": [
+            [
+              1,
+              9.846039132000442
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "aslr": "Full randomization",
+    "boot_time": "2026-09-18 10:17:01",
+    "cpu_config": "idle:none",
+    "cpu_count": 1,
+    "cpu_freq": "0=2400 MHz",
+    "cpu_model_name": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+    "description": "MDP benchmark",
+    "hostname": "ubuntu",
+    "loops": 1,
+    "name": "mdp",
+    "perf_version": "2.10.0",
+    "performance_version": "1.14.0",
+    "platform": "Linux-5.15.0-1106-kvm-x86_64-with-glibc2.35",
+    "python_cflags": "-Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -fstack-protector-strong -Wformat -Werror=format-security -g -Og -fstack-protector-strong -Wformat -Werror=format-security",
+    "python_compiler": "GCC 11.4.0",
+    "python_config_args": "'--prefix=/usr' '--libdir=/usr/lib/x86_64-linux-gnu' '--enable-ipv6' '--enable-loadable-sqlite-extensions' '--with-dbmliborder=bdb:gdbm' '--with-computed-gotos' '--without-ensurepip' '--with-system-expat' '--with-dtrace' '--with-system-libmpdec' '--with-wheel-pkg-dir=/usr/share/python-wheels/' 'MKDIR_P=/bin/mkdir -p' '--with-system-ffi' '--enable-shared' '--with-pydebug' 'CC=x86_64-linux-gnu-gcc' 'CFLAGS=-g -Og -fstack-protector-strong -Wformat -Werror=format-security' 'LDFLAGS=-Wl,-Bsymbolic-functions ' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2'",
+    "python_executable": "/root/project/venv/cpython3.10-73966b47cd1a-compat-31b33d68c68a/bin/python",
+    "python_implementation": "cpython",
+    "python_version": "3.10.12 (64-bit)",
+    "runnable_threads": 1,
+    "tags": [],
+    "timer": "clock_gettime(CLOCK_MONOTONIC), resolution: 1.00 ns",
+    "unit": "second"
+  },
+  "version": "1.0"
+}
