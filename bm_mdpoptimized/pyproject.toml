@@ -1,0 +1,8 @@
+[project]
+name = "mdpoptimized"
+version = "1.0"
+dependencies = ["pyperf"]
+requires-python = ">=3.8"
+
+[tool.pyperformance]
+name = "mdpoptimized"
