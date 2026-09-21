@@ -1,0 +1,7 @@
+[benchmarks]
+
+name	metafile
+mdpoptimized	<local>
+
+[group default]
+mdpoptimized
