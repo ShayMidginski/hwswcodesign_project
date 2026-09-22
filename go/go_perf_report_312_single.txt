@@ -1,0 +1,1716 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 303  of event 'cpu-clock'
+# Event count (approx.): 3060606030
+#
+# Children      Self  Command         Shared Object     Symbol                                                                                                                           
+# ........  ........  ..............  ................  .................................................................................................................................
+#
+    97.36%    54.13%  python3.12-dbg  python3.12d       [.] _PyEval_EvalFrameDefault
+            |          
+            |--43.23%--_PyEval_EvalFrameDefault
+            |          |          
+            |          |--17.82%--PyObject_Vectorcall
+            |          |          |          
+            |          |           --16.17%--_PyObject_VectorcallTstate.lto_priv.2
+            |          |                     |          
+            |          |                     |--10.23%--_PyFunction_Vectorcall
+            |          |                     |          |          
+            |          |                     |           --9.24%--_PyEval_Vector
+            |          |                     |                     |          
+            |          |                     |                     |--3.63%--_PyEvalFramePushAndInit.lto_priv.0
+            |          |                     |                     |          |          
+            |          |                     |                     |          |--1.32%--initialize_locals
+            |          |                     |                     |          |          
+            |          |                     |                     |           --0.99%--_PyThreadState_PushFrame
+            |          |                     |                     |          
+            |          |                     |                      --2.97%--py_trampoline_evaluator
+            |          |                     |          
+            |          |                     |--1.98%--_PyObject_MakeTpCall
+            |          |                     |          |          
+            |          |                     |          |--1.32%--_Py_Dealloc
+            |          |                     |          |          |          
+            |          |                     |          |           --0.99%--tupledealloc.lto_priv.0
+            |          |                     |          |          
+            |          |                     |           --0.66%--_PyTuple_FromArray
+            |          |                     |                     tuple_alloc
+            |          |                     |          
+            |          |                     |--0.99%--cfunction_vectorcall_FASTCALL_KEYWORDS
+            |          |                     |          builtin___build_class__.lto_priv.0
+            |          |                     |          PyObject_VectorcallDict
+            |          |                     |          _PyObject_FastCallDictTstate
+            |          |                     |          type_vectorcall.lto_priv.0
+            |          |                     |          _PyObject_MakeTpCall
+            |          |                     |          type_call.lto_priv.0
+            |          |                     |          type_new.lto_priv.0
+            |          |                     |          type_new_impl
+            |          |                     |          
+            |          |                      --0.66%--_Py_CheckFunctionResult
+            |          |          
+            |          |--3.30%--_PyObject_GetMethod
+            |          |          |          
+            |          |           --1.32%--PyDict_GetItemWithError
+            |          |                     |          
+            |          |                      --0.99%--_Py_dict_lookup
+            |          |                                |          
+            |          |                                 --0.66%--unicodekeys_lookup_unicode
+            |          |          
+            |          |--2.64%--_Py_Dealloc
+            |          |          |          
+            |          |          |--0.66%--long_dealloc.lto_priv.0
+            |          |          |          PyObject_Free
+            |          |          |          _PyMem_DebugFree
+            |          |          |          PyGILState_Check
+            |          |          |          
+            |          |           --0.66%--listiter_dealloc.lto_priv.0
+            |          |                     PyObject_GC_Del
+            |          |                     PyObject_Free
+            |          |                     _PyMem_DebugFree
+            |          |                     _PyMem_DebugRawFree
+            |          |                     _PyMem_DebugCheckAddress
+            |          |          
+            |          |--2.64%--PyDict_Contains
+            |          |          |          
+            |          |           --1.65%--_Py_dict_lookup
+            |          |                     |          
+            |          |                      --1.32%--unicodekeys_lookup_unicode
+            |          |          
+            |          |--2.31%--_PyEvalFrameClearAndPop.lto_priv.0
+            |          |          clear_thread_frame
+            |          |          |          
+            |          |           --0.99%--_PyFrame_ClearExceptCode
+            |          |                     |          
+            |          |                      --0.66%--_Py_DECREF_DecRefTotal
+            |          |          
+            |          |--2.31%--_Py_DECREF_DecRefTotal
+            |          |          
+            |          |--1.98%--PyObject_Call
+            |          |          _PyObject_Call
+            |          |          |          
+            |          |           --1.32%--_PyVectorcall_Call
+            |          |                     cfunction_vectorcall_O
+            |          |                     _imp_create_builtin
+            |          |                     create_builtin
+            |          |                     |          
+            |          |                      --0.66%--PyModule_FromDefAndSpec2
+            |          |                                _add_methods_to_object
+            |          |          
+            |          |--1.65%--_PyList_AppendTakeRef.lto_priv.0
+            |          |          _PyList_AppendTakeRefListResize
+            |          |          |          
+            |          |           --1.32%--list_resize.lto_priv.0
+            |          |                     PyMem_Realloc
+            |          |                     _PyMem_DebugRealloc
+            |          |                     |          
+            |          |                      --0.99%--_PyMem_DebugRawRealloc
+            |          |          
+            |          |--1.65%--PyNumber_InPlaceXor
+            |          |          |          
+            |          |           --1.32%--binary_iop
+            |          |                     binary_iop1
+            |          |                     binary_op1
+            |          |                     long_xor.lto_priv.0
+            |          |                     long_bitwise
+            |          |                     |          
+            |          |                      --0.99%--_PyLong_New
+            |          |                                |          
+            |          |                                 --0.66%--PyObject_Malloc
+            |          |                                           _PyMem_DebugMalloc
+            |          |                                           _PyMem_DebugRawMalloc
+            |          |                                           _PyMem_DebugRawAlloc
+            |          |          
+            |          |--0.99%--_Py_INCREF_IncRefTotal
+            |          |          
+            |          |--0.99%--_PyLong_Add
+            |          |          |          
+            |          |           --0.66%--_PyLong_FromMedium.lto_priv.0
+            |          |          
+            |          |--0.66%--_Py_HandlePending
+            |          |          _Py_RunGC
+            |          |          gc_collect_generations
+            |          |          gc_collect_with_callback
+            |          |          gc_collect_main
+            |          |          
+            |           --0.66%--PyObject_GetIter
+            |                     list_iter.lto_priv.0
+            |                     _PyObject_GC_New
+            |                     gc_alloc
+            |                     PyObject_Malloc
+            |                     _PyMem_DebugMalloc
+            |          
+            |--14.85%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--12.21%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--4.95%--py::Square.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--4.29%--py::EmptySet.random_choice:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--2.64%--py::Square.remove:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--1.98%--py::UCTNode.random_playout:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--1.98%--py::EmptySet.set:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--1.98%--py::ZobristHash.update:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--1.98%--py::Board.useful_fast:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--1.65%--py::Board.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--0.99%--py::UCTNode.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+            |--0.99%--py::Board.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+             --0.66%--py::EmptySet.add:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+
+    24.75%     0.33%  python3.12-dbg  [JIT] tid 2158    [.] py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               |          
+                --24.42%--_PyEval_EvalFrameDefault
+                          |          
+                          |--4.29%--PyObject_Vectorcall
+                          |          |          
+                          |           --3.96%--_PyObject_VectorcallTstate.lto_priv.2
+                          |                     |          
+                          |                      --3.30%--_PyFunction_Vectorcall
+                          |                                |          
+                          |                                 --2.64%--_PyEval_Vector
+                          |                                           |          
+                          |                                            --1.65%--_PyEvalFramePushAndInit.lto_priv.0
+                          |                                                      |          
+                          |                                                       --0.66%--_PyThreadState_PushFrame
+                          |          
+                          |--1.65%--_PyObject_GetMethod
+                          |          |          
+                          |           --0.66%--PyDict_GetItemWithError
+                          |                     _Py_dict_lookup
+                          |                     unicodekeys_lookup_unicode
+                          |          
+                          |--1.65%--PyDict_Contains
+                          |          |          
+                          |           --0.99%--_Py_dict_lookup
+                          |                     unicodekeys_lookup_unicode
+                          |          
+                          |--0.99%--_PyEvalFrameClearAndPop.lto_priv.0
+                          |          clear_thread_frame
+                          |          
+                           --0.66%--_Py_DECREF_DecRefTotal
+
+    18.81%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+               |--4.29%--PyObject_Vectorcall
+               |          |          
+               |           --3.96%--_PyObject_VectorcallTstate.lto_priv.2
+               |                     |          
+               |                      --3.30%--_PyFunction_Vectorcall
+               |                                |          
+               |                                 --2.97%--_PyEval_Vector
+               |                                           |          
+               |                                           |--0.99%--py_trampoline_evaluator
+               |                                           |          
+               |                                            --0.99%--_PyEvalFramePushAndInit.lto_priv.0
+               |                                                      |          
+               |                                                       --0.66%--initialize_locals
+               |          
+                --0.66%--_Py_DECREF_DecRefTotal
+
+    18.15%     1.65%  python3.12-dbg  python3.12d       [.] PyObject_Vectorcall
+            |          
+            |--16.50%--PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          |          
+            |          |--10.23%--_PyFunction_Vectorcall
+            |          |          |          
+            |          |           --9.24%--_PyEval_Vector
+            |          |                     |          
+            |          |                     |--3.63%--_PyEvalFramePushAndInit.lto_priv.0
+            |          |                     |          |          
+            |          |                     |          |--1.32%--initialize_locals
+            |          |                     |          |          
+            |          |                     |           --0.99%--_PyThreadState_PushFrame
+            |          |                     |          
+            |          |                      --2.97%--py_trampoline_evaluator
+            |          |          
+            |          |--1.98%--_PyObject_MakeTpCall
+            |          |          |          
+            |          |          |--1.32%--_Py_Dealloc
+            |          |          |          |          
+            |          |          |           --0.99%--tupledealloc.lto_priv.0
+            |          |          |          
+            |          |           --0.66%--_PyTuple_FromArray
+            |          |                     tuple_alloc
+            |          |          
+            |          |--1.32%--cfunction_vectorcall_FASTCALL_KEYWORDS
+            |          |          |          
+            |          |           --0.99%--builtin___build_class__.lto_priv.0
+            |          |                     PyObject_VectorcallDict
+            |          |                     _PyObject_FastCallDictTstate
+            |          |                     type_vectorcall.lto_priv.0
+            |          |                     _PyObject_MakeTpCall
+            |          |                     type_call.lto_priv.0
+            |          |                     type_new.lto_priv.0
+            |          |                     type_new_impl
+            |          |          
+            |           --0.66%--_Py_CheckFunctionResult
+            |          
+             --0.66%--_PyEval_EvalFrameDefault
+                       PyObject_Vectorcall
+
+    17.16%     1.98%  python3.12-dbg  python3.12d       [.] _PyObject_VectorcallTstate.lto_priv.2
+            |          
+            |--15.18%--_PyObject_VectorcallTstate.lto_priv.2
+            |          |          
+            |          |--11.22%--_PyFunction_Vectorcall
+            |          |          |          
+            |          |           --9.57%--_PyEval_Vector
+            |          |                     |          
+            |          |                     |--3.63%--_PyEvalFramePushAndInit.lto_priv.0
+            |          |                     |          |          
+            |          |                     |          |--1.32%--initialize_locals
+            |          |                     |          |          
+            |          |                     |           --0.99%--_PyThreadState_PushFrame
+            |          |                     |          
+            |          |                      --2.97%--py_trampoline_evaluator
+            |          |          
+            |          |--1.98%--_PyObject_MakeTpCall
+            |          |          |          
+            |          |          |--1.32%--_Py_Dealloc
+            |          |          |          |          
+            |          |          |           --0.99%--tupledealloc.lto_priv.0
+            |          |          |          
+            |          |           --0.66%--_PyTuple_FromArray
+            |          |                     tuple_alloc
+            |          |          
+            |          |--0.99%--cfunction_vectorcall_FASTCALL_KEYWORDS
+            |          |          builtin___build_class__.lto_priv.0
+            |          |          PyObject_VectorcallDict
+            |          |          _PyObject_FastCallDictTstate
+            |          |          type_vectorcall.lto_priv.0
+            |          |          _PyObject_MakeTpCall
+            |          |          type_call.lto_priv.0
+            |          |          type_new.lto_priv.0
+            |          |          type_new_impl
+            |          |          
+            |           --0.66%--_Py_CheckFunctionResult
+            |          
+            |--0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          
+             --0.66%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       PyObject_Vectorcall
+                       _PyObject_VectorcallTstate.lto_priv.2
+
+    11.22%     1.65%  python3.12-dbg  python3.12d       [.] _PyFunction_Vectorcall
+            |          
+            |--9.57%--_PyFunction_Vectorcall
+            |          _PyEval_Vector
+            |          |          
+            |          |--3.63%--_PyEvalFramePushAndInit.lto_priv.0
+            |          |          |          
+            |          |          |--1.32%--initialize_locals
+            |          |          |          
+            |          |           --0.99%--_PyThreadState_PushFrame
+            |          |          
+            |           --2.97%--py_trampoline_evaluator
+            |          
+            |--0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          _PyFunction_Vectorcall
+            |          
+             --0.66%--_PyObject_VectorcallTstate.lto_priv.2
+                       _PyFunction_Vectorcall
+
+     9.57%     2.31%  python3.12-dbg  python3.12d       [.] _PyEval_Vector
+            |          
+            |--7.26%--_PyEval_Vector
+            |          |          
+            |          |--3.63%--_PyEvalFramePushAndInit.lto_priv.0
+            |          |          |          
+            |          |          |--1.32%--initialize_locals
+            |          |          |          
+            |          |           --0.99%--_PyThreadState_PushFrame
+            |          |          
+            |           --2.97%--py_trampoline_evaluator
+            |          
+            |--0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          _PyFunction_Vectorcall
+            |          _PyEval_Vector
+            |          
+             --0.66%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       PyObject_Vectorcall
+                       _PyObject_VectorcallTstate.lto_priv.2
+                       _PyFunction_Vectorcall
+                       _PyEval_Vector
+
+     7.59%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Square.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Square.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     7.26%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EmptySet.random_choice:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::EmptySet.random_choice:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+                --2.64%--PyObject_Vectorcall
+                          _PyObject_VectorcallTstate.lto_priv.2
+                          |          
+                          |--1.32%--_PyObject_MakeTpCall
+                          |          |          
+                          |           --0.99%--_Py_Dealloc
+                          |                     |          
+                          |                      --0.66%--tupledealloc.lto_priv.0
+                          |          
+                           --0.99%--_PyFunction_Vectorcall
+                                     _PyEval_Vector
+                                     |          
+                                      --0.66%--py_trampoline_evaluator
+
+     4.95%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Square.remove:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Square.remove:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+                --1.32%--PyObject_Vectorcall
+                          |          
+                           --0.99%--_PyObject_VectorcallTstate.lto_priv.2
+                                     |          
+                                      --0.66%--_PyFunction_Vectorcall
+                                                _PyEval_Vector
+
+     4.62%     0.66%  python3.12-dbg  python3.12d       [.] _Py_Dealloc
+            |          
+             --3.96%--_Py_Dealloc
+                       |          
+                       |--0.99%--tupledealloc.lto_priv.0
+                       |          
+                       |--0.99%--long_dealloc.lto_priv.0
+                       |          PyObject_Free
+                       |          _PyMem_DebugFree
+                       |          |          
+                       |           --0.66%--PyGILState_Check
+                       |          
+                        --0.66%--listiter_dealloc.lto_priv.0
+                                  PyObject_GC_Del
+                                  PyObject_Free
+                                  _PyMem_DebugFree
+                                  _PyMem_DebugRawFree
+                                  _PyMem_DebugCheckAddress
+
+     4.29%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::ZobristHash.update:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::ZobristHash.update:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+               |--1.32%--PyNumber_InPlaceXor
+               |          binary_iop
+               |          binary_iop1
+               |          binary_op1
+               |          long_xor.lto_priv.0
+               |          long_bitwise
+               |          |          
+               |           --0.99%--_PyLong_New
+               |                     |          
+               |                      --0.66%--PyObject_Malloc
+               |                                _PyMem_DebugMalloc
+               |                                _PyMem_DebugRawMalloc
+               |                                _PyMem_DebugRawAlloc
+               |          
+                --0.66%--_Py_Dealloc
+
+     3.63%     0.99%  python3.12-dbg  python3.12d       [.] _PyEvalFramePushAndInit.lto_priv.0
+            |          
+             --2.64%--_PyEvalFramePushAndInit.lto_priv.0
+                       |          
+                       |--1.32%--initialize_locals
+                       |          
+                        --0.99%--_PyThreadState_PushFrame
+
+     3.30%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_MakeTpCall
+            |
+            ---_PyObject_MakeTpCall
+               |          
+               |--1.32%--type_call.lto_priv.0
+               |          type_new.lto_priv.0
+               |          type_new_impl
+               |          
+               |--1.32%--_Py_Dealloc
+               |          |          
+               |           --0.99%--tupledealloc.lto_priv.0
+               |          
+                --0.66%--_PyTuple_FromArray
+                          tuple_alloc
+
+     3.30%     3.30%  python3.12-dbg  python3.12d       [.] _Py_DECREF_DecRefTotal
+            |          
+            |--0.99%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          |          
+            |           --0.66%--_Py_DECREF_DecRefTotal
+            |          
+             --0.99%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       |          
+                        --0.66%--_Py_DECREF_DecRefTotal
+
+     3.30%     0.99%  python3.12-dbg  python3.12d       [.] _PyObject_GetMethod
+            |          
+             --2.31%--_PyObject_GetMethod
+                       |          
+                        --1.32%--PyDict_GetItemWithError
+                                  |          
+                                   --0.99%--_Py_dict_lookup
+                                             |          
+                                              --0.66%--unicodekeys_lookup_unicode
+
+     3.30%     0.66%  python3.12-dbg  python3.12d       [.] _Py_dict_lookup
+            |          
+             --2.64%--_Py_dict_lookup
+                       unicodekeys_lookup_unicode
+
+     2.97%     2.31%  python3.12-dbg  python3.12d       [.] py_trampoline_evaluator
+            |          
+            |--0.99%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          _PyFunction_Vectorcall
+            |          _PyEval_Vector
+            |          py_trampoline_evaluator
+            |          
+            |--0.66%--py::EmptySet.random_choice:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          PyObject_Vectorcall
+            |          _PyObject_VectorcallTstate.lto_priv.2
+            |          _PyFunction_Vectorcall
+            |          _PyEval_Vector
+            |          py_trampoline_evaluator
+            |          
+             --0.66%--py_trampoline_evaluator
+
+     2.97%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_Malloc
+            |
+            ---PyObject_Malloc
+               _PyMem_DebugMalloc
+               |          
+               |--1.98%--_PyMem_DebugRawMalloc
+               |          |          
+               |           --1.65%--_PyMem_DebugRawAlloc
+               |                     |          
+               |                      --0.99%--_PyObject_Malloc
+               |                                |          
+               |                                 --0.66%--PyMem_RawMalloc
+               |                                           _PyMem_DebugRawMalloc
+               |                                           _PyMem_DebugRawAlloc
+               |                                           _PyMem_RawMalloc
+               |                                           malloc
+               |                                           _int_malloc
+               |          
+                --0.99%--PyGILState_Check
+                          |          
+                           --0.66%--PyThread_tss_get
+
+     2.97%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_DebugMalloc
+            |
+            ---_PyMem_DebugMalloc
+               |          
+               |--1.98%--_PyMem_DebugRawMalloc
+               |          |          
+               |           --1.65%--_PyMem_DebugRawAlloc
+               |                     |          
+               |                      --0.99%--_PyObject_Malloc
+               |                                |          
+               |                                 --0.66%--PyMem_RawMalloc
+               |                                           _PyMem_DebugRawMalloc
+               |                                           _PyMem_DebugRawAlloc
+               |                                           _PyMem_RawMalloc
+               |                                           malloc
+               |                                           _int_malloc
+               |          
+                --0.99%--PyGILState_Check
+                          |          
+                           --0.66%--PyThread_tss_get
+
+     2.97%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Board.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+               |--0.66%--_PyObject_GetMethod
+               |          PyDict_GetItemWithError
+               |          
+                --0.66%--PyObject_Vectorcall
+                          _PyObject_VectorcallTstate.lto_priv.2
+
+     2.64%     2.64%  python3.12-dbg  python3.12d       [.] unicodekeys_lookup_unicode
+            |          
+             --1.65%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       |          
+                       |--0.99%--PyDict_Contains
+                       |          _Py_dict_lookup
+                       |          unicodekeys_lookup_unicode
+                       |          
+                        --0.66%--_PyObject_GetMethod
+                                  PyDict_GetItemWithError
+                                  _Py_dict_lookup
+                                  unicodekeys_lookup_unicode
+
+     2.64%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::UCTNode.random_playout:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::UCTNode.random_playout:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               |          
+                --0.66%--PyObject_Vectorcall
+                          _PyObject_VectorcallTstate.lto_priv.2
+
+     2.64%     0.99%  python3.12-dbg  python3.12d       [.] PyDict_Contains
+            |          
+            |--1.65%--PyDict_Contains
+            |          _Py_dict_lookup
+            |          |          
+            |           --1.32%--unicodekeys_lookup_unicode
+            |          
+             --0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       PyDict_Contains
+
+     2.31%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_Call
+            |
+            ---PyObject_Call
+               _PyObject_Call
+               |          
+                --1.65%--_PyVectorcall_Call
+                          cfunction_vectorcall_O
+                          _imp_create_builtin
+                          create_builtin
+                          |          
+                           --0.99%--PyModule_FromDefAndSpec2
+                                     _add_methods_to_object
+                                     |          
+                                      --0.66%--PyCMethod_New
+                                                _PyObject_GC_New
+                                                gc_alloc
+                                                PyObject_Malloc
+                                                _PyMem_DebugMalloc
+
+     2.31%     0.33%  python3.12-dbg  python3.12d       [.] _PyObject_Call
+            |          
+             --1.98%--_PyObject_Call
+                       |          
+                        --1.65%--_PyVectorcall_Call
+                                  cfunction_vectorcall_O
+                                  _imp_create_builtin
+                                  create_builtin
+                                  |          
+                                   --0.99%--PyModule_FromDefAndSpec2
+                                             _add_methods_to_object
+                                             |          
+                                              --0.66%--PyCMethod_New
+                                                        _PyObject_GC_New
+                                                        gc_alloc
+                                                        PyObject_Malloc
+                                                        _PyMem_DebugMalloc
+
+     2.31%     0.99%  python3.12-dbg  python3.12d       [.] PyGILState_Check
+            |          
+             --1.32%--PyGILState_Check
+                       PyThread_tss_get
+                       |          
+                        --0.66%--pthread_getspecific@@GLIBC_2.34
+
+     2.31%     0.00%  python3.12-dbg  python3.12d       [.] _PyEvalFrameClearAndPop.lto_priv.0
+            |
+            ---_PyEvalFrameClearAndPop.lto_priv.0
+               clear_thread_frame
+               |          
+                --0.99%--_PyFrame_ClearExceptCode
+                          |          
+                           --0.66%--_Py_DECREF_DecRefTotal
+
+     2.31%     0.99%  python3.12-dbg  python3.12d       [.] clear_thread_frame
+            |          
+            |--1.32%--clear_thread_frame
+            |          |          
+            |           --0.99%--_PyFrame_ClearExceptCode
+            |                     |          
+            |                      --0.66%--_Py_DECREF_DecRefTotal
+            |          
+             --0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       _PyEvalFrameClearAndPop.lto_priv.0
+                       clear_thread_frame
+
+     2.31%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EmptySet.set:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::EmptySet.set:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     2.31%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.useful_fast:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Board.useful_fast:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     2.31%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_DebugFree
+            |
+            ---_PyMem_DebugFree
+               |          
+               |--1.65%--_PyMem_DebugRawFree
+               |          |          
+               |           --1.32%--_PyMem_DebugCheckAddress
+               |          
+                --0.66%--PyGILState_Check
+
+     1.98%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_call_with_frames_removed:<frozen importlib._bootstrap>
+            |
+            ---py::_call_with_frames_removed:<frozen importlib._bootstrap>
+               _PyEval_EvalFrameDefault
+               |          
+                --1.65%--PyObject_Call
+                          _PyObject_Call
+                          |          
+                           --1.32%--_PyVectorcall_Call
+                                     cfunction_vectorcall_O
+                                     _imp_create_builtin
+                                     create_builtin
+                                     |          
+                                      --0.66%--PyModule_FromDefAndSpec2
+                                                _add_methods_to_object
+
+     1.98%     0.33%  python3.12-dbg  python3.12d       [.] _PyMem_DebugRawMalloc
+            |          
+             --1.65%--_PyMem_DebugRawMalloc
+                       _PyMem_DebugRawAlloc
+                       |          
+                        --0.99%--_PyObject_Malloc
+                                  |          
+                                   --0.66%--PyMem_RawMalloc
+                                             _PyMem_DebugRawMalloc
+                                             _PyMem_DebugRawAlloc
+                                             _PyMem_RawMalloc
+                                             malloc
+                                             _int_malloc
+
+     1.98%     0.33%  python3.12-dbg  python3.12d       [.] PyDict_GetItemWithError
+            |          
+             --1.65%--PyDict_GetItemWithError
+                       _Py_dict_lookup
+                       |          
+                        --1.32%--unicodekeys_lookup_unicode
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               Py_BytesMain
+               pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  libc.so.6         [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               main
+               Py_BytesMain
+               pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  libc.so.6         [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+               Py_BytesMain
+               pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] main
+            |
+            ---main
+               Py_BytesMain
+               pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] Py_BytesMain
+            |
+            ---Py_BytesMain
+               pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] pymain_main
+            |
+            ---pymain_main
+               |          
+                --1.32%--Py_RunMain
+                          |          
+                           --0.99%--Py_FinalizeEx
+                                     |          
+                                      --0.66%--finalize_modules
+                                                _PyGC_CollectNoFail
+                                                gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _PyVectorcall_Call
+            |
+            ---_PyVectorcall_Call
+               cfunction_vectorcall_O
+               _imp_create_builtin
+               create_builtin
+               |          
+                --0.99%--PyModule_FromDefAndSpec2
+                          _add_methods_to_object
+                          |          
+                           --0.66%--PyCMethod_New
+                                     _PyObject_GC_New
+                                     gc_alloc
+                                     PyObject_Malloc
+                                     _PyMem_DebugMalloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] type_new.lto_priv.0
+            |
+            ---type_new.lto_priv.0
+               type_new_impl
+               |          
+                --0.66%--type_new_init
+                          type_new_alloc
+                          PyType_GenericAlloc
+                          _PyType_AllocNoTrack
+                          PyObject_Malloc
+                          _PyMem_DebugMalloc
+                          _PyMem_DebugRawMalloc
+                          _PyMem_DebugRawAlloc
+                          _PyObject_Malloc
+                          PyMem_RawMalloc
+                          _PyMem_DebugRawMalloc
+                          _PyMem_DebugRawAlloc
+                          _PyMem_RawMalloc
+                          malloc
+                          _int_malloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] cfunction_vectorcall_O
+            |
+            ---cfunction_vectorcall_O
+               _imp_create_builtin
+               create_builtin
+               |          
+                --0.99%--PyModule_FromDefAndSpec2
+                          _add_methods_to_object
+                          |          
+                           --0.66%--PyCMethod_New
+                                     _PyObject_GC_New
+                                     gc_alloc
+                                     PyObject_Malloc
+                                     _PyMem_DebugMalloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] type_new_impl
+            |
+            ---type_new_impl
+               |          
+                --0.66%--type_new_init
+                          type_new_alloc
+                          PyType_GenericAlloc
+                          _PyType_AllocNoTrack
+                          PyObject_Malloc
+                          _PyMem_DebugMalloc
+                          _PyMem_DebugRawMalloc
+                          _PyMem_DebugRawAlloc
+                          _PyObject_Malloc
+                          PyMem_RawMalloc
+                          _PyMem_DebugRawMalloc
+                          _PyMem_DebugRawAlloc
+                          _PyMem_RawMalloc
+                          malloc
+                          _int_malloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _imp_create_builtin
+            |
+            ---_imp_create_builtin
+               create_builtin
+               |          
+                --0.99%--PyModule_FromDefAndSpec2
+                          _add_methods_to_object
+                          |          
+                           --0.66%--PyCMethod_New
+                                     _PyObject_GC_New
+                                     gc_alloc
+                                     PyObject_Malloc
+                                     _PyMem_DebugMalloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] create_builtin
+            |
+            ---create_builtin
+               |          
+                --0.99%--PyModule_FromDefAndSpec2
+                          _add_methods_to_object
+                          |          
+                           --0.66%--PyCMethod_New
+                                     _PyObject_GC_New
+                                     gc_alloc
+                                     PyObject_Malloc
+                                     _PyMem_DebugMalloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _PyList_AppendTakeRef.lto_priv.0
+            |
+            ---_PyList_AppendTakeRef.lto_priv.0
+               _PyList_AppendTakeRefListResize
+               |          
+                --1.32%--list_resize.lto_priv.0
+                          PyMem_Realloc
+                          _PyMem_DebugRealloc
+                          |          
+                           --0.99%--_PyMem_DebugRawRealloc
+
+     1.65%     0.33%  python3.12-dbg  python3.12d       [.] _PyList_AppendTakeRefListResize
+            |          
+             --1.32%--_PyList_AppendTakeRefListResize
+                       list_resize.lto_priv.0
+                       PyMem_Realloc
+                       _PyMem_DebugRealloc
+                       |          
+                        --0.99%--_PyMem_DebugRawRealloc
+
+     1.65%     0.33%  python3.12-dbg  python3.12d       [.] PyNumber_InPlaceXor
+            |          
+             --1.32%--PyNumber_InPlaceXor
+                       binary_iop
+                       binary_iop1
+                       binary_op1
+                       long_xor.lto_priv.0
+                       long_bitwise
+                       |          
+                        --0.99%--_PyLong_New
+                                  |          
+                                   --0.66%--PyObject_Malloc
+                                             _PyMem_DebugMalloc
+                                             _PyMem_DebugRawMalloc
+                                             _PyMem_DebugRawAlloc
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_DebugRawAlloc
+            |
+            ---_PyMem_DebugRawAlloc
+               |          
+                --0.99%--_PyObject_Malloc
+                          |          
+                           --0.66%--PyMem_RawMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+                                     _PyMem_RawMalloc
+                                     malloc
+                                     _int_malloc
+
+     1.65%     1.65%  python3.12-dbg  python3.12d       [.] _Py_INCREF_IncRefTotal
+     1.65%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EmptySet.remove:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::EmptySet.remove:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     1.65%     0.66%  python3.12-dbg  python3.12d       [.] tupledealloc.lto_priv.0
+            |          
+             --0.99%--tupledealloc.lto_priv.0
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_Free
+            |
+            ---PyObject_Free
+               _PyMem_DebugFree
+               |          
+               |--0.99%--_PyMem_DebugRawFree
+               |          _PyMem_DebugCheckAddress
+               |          
+                --0.66%--PyGILState_Check
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] gc_collect_main
+            |
+            ---gc_collect_main
+
+     1.65%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::UCTNode.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::UCTNode.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     1.65%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_DebugRawFree
+            |
+            ---_PyMem_DebugRawFree
+               |          
+                --1.32%--_PyMem_DebugCheckAddress
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] cfunction_vectorcall_FASTCALL_KEYWORDS
+            |
+            ---cfunction_vectorcall_FASTCALL_KEYWORDS
+               |          
+                --0.99%--builtin___build_class__.lto_priv.0
+                          PyObject_VectorcallDict
+                          _PyObject_FastCallDictTstate
+                          type_vectorcall.lto_priv.0
+                          _PyObject_MakeTpCall
+                          type_call.lto_priv.0
+                          type_new.lto_priv.0
+                          type_new_impl
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] Py_RunMain
+            |
+            ---Py_RunMain
+               |          
+                --0.99%--Py_FinalizeEx
+                          |          
+                           --0.66%--finalize_modules
+                                     _PyGC_CollectNoFail
+                                     gc_collect_main
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] type_vectorcall.lto_priv.0
+            |
+            ---type_vectorcall.lto_priv.0
+               _PyObject_MakeTpCall
+               type_call.lto_priv.0
+               type_new.lto_priv.0
+               type_new_impl
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] type_call.lto_priv.0
+            |
+            ---type_call.lto_priv.0
+               type_new.lto_priv.0
+               type_new_impl
+
+     1.32%     0.99%  python3.12-dbg  python3.12d       [.] _PyMem_DebugCheckAddress
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] list_resize.lto_priv.0
+            |
+            ---list_resize.lto_priv.0
+               PyMem_Realloc
+               _PyMem_DebugRealloc
+               |          
+                --0.99%--_PyMem_DebugRawRealloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] PyMem_Realloc
+            |
+            ---PyMem_Realloc
+               _PyMem_DebugRealloc
+               |          
+                --0.99%--_PyMem_DebugRawRealloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_GC_New
+            |
+            ---_PyObject_GC_New
+               gc_alloc
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               |          
+               |--0.66%--PyGILState_Check
+               |          
+                --0.66%--_PyMem_DebugRawMalloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] binary_iop
+            |
+            ---binary_iop
+               binary_iop1
+               binary_op1
+               long_xor.lto_priv.0
+               long_bitwise
+               |          
+                --0.99%--_PyLong_New
+                          |          
+                           --0.66%--PyObject_Malloc
+                                     _PyMem_DebugMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+
+     1.32%     0.66%  python3.12-dbg  python3.12d       [.] PyThread_tss_get
+            |          
+            |--0.66%--py::Square.move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |          _PyEval_EvalFrameDefault
+            |          
+             --0.66%--PyThread_tss_get
+                       pthread_getspecific@@GLIBC_2.34
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_DebugRealloc
+            |
+            ---_PyMem_DebugRealloc
+               |          
+                --0.99%--_PyMem_DebugRawRealloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] binary_iop1
+            |
+            ---binary_iop1
+               binary_op1
+               long_xor.lto_priv.0
+               long_bitwise
+               |          
+                --0.99%--_PyLong_New
+                          |          
+                           --0.66%--PyObject_Malloc
+                                     _PyMem_DebugMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] gc_alloc
+            |
+            ---gc_alloc
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               |          
+               |--0.66%--PyGILState_Check
+               |          
+                --0.66%--_PyMem_DebugRawMalloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] binary_op1
+            |
+            ---binary_op1
+               long_xor.lto_priv.0
+               long_bitwise
+               |          
+                --0.99%--_PyLong_New
+                          |          
+                           --0.66%--PyObject_Malloc
+                                     _PyMem_DebugMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+
+     1.32%     1.32%  python3.12-dbg  python3.12d       [.] initialize_locals
+            |          
+             --0.66%--py::Board.useful:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       PyObject_Vectorcall
+                       _PyObject_VectorcallTstate.lto_priv.2
+                       _PyFunction_Vectorcall
+                       _PyEval_Vector
+                       _PyEvalFramePushAndInit.lto_priv.0
+                       initialize_locals
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] long_xor.lto_priv.0
+            |
+            ---long_xor.lto_priv.0
+               long_bitwise
+               |          
+                --0.99%--_PyLong_New
+                          |          
+                           --0.66%--PyObject_Malloc
+                                     _PyMem_DebugMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+
+     1.32%     0.00%  python3.12-dbg  python3.12d       [.] long_bitwise
+            |
+            ---long_bitwise
+               |          
+                --0.99%--_PyLong_New
+                          |          
+                           --0.66%--PyObject_Malloc
+                                     _PyMem_DebugMalloc
+                                     _PyMem_DebugRawMalloc
+                                     _PyMem_DebugRawAlloc
+
+     0.99%     0.33%  python3.12-dbg  libc.so.6         [.] _int_malloc
+            |          
+             --0.66%--_int_malloc
+                       unlink_chunk.constprop.0
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] builtin___build_class__.lto_priv.0
+            |
+            ---builtin___build_class__.lto_priv.0
+               PyObject_VectorcallDict
+               _PyObject_FastCallDictTstate
+               type_vectorcall.lto_priv.0
+               _PyObject_MakeTpCall
+               type_call.lto_priv.0
+               type_new.lto_priv.0
+               type_new_impl
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_VectorcallDict
+            |
+            ---PyObject_VectorcallDict
+               _PyObject_FastCallDictTstate
+               type_vectorcall.lto_priv.0
+               _PyObject_MakeTpCall
+               type_call.lto_priv.0
+               type_new.lto_priv.0
+               type_new_impl
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_FastCallDictTstate
+            |
+            ---_PyObject_FastCallDictTstate
+               type_vectorcall.lto_priv.0
+               _PyObject_MakeTpCall
+               type_call.lto_priv.0
+               type_new.lto_priv.0
+               type_new_impl
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] PyModule_FromDefAndSpec2
+            |
+            ---PyModule_FromDefAndSpec2
+               _add_methods_to_object
+               |          
+                --0.66%--PyCMethod_New
+                          _PyObject_GC_New
+                          gc_alloc
+                          PyObject_Malloc
+                          _PyMem_DebugMalloc
+
+     0.99%     0.33%  python3.12-dbg  python3.12d       [.] _add_methods_to_object
+            |          
+             --0.66%--_add_methods_to_object
+                       PyCMethod_New
+                       _PyObject_GC_New
+                       gc_alloc
+                       PyObject_Malloc
+                       _PyMem_DebugMalloc
+
+     0.99%     0.33%  python3.12-dbg  python3.12d       [.] _PyLong_New
+            |          
+             --0.66%--_PyLong_New
+                       PyObject_Malloc
+                       _PyMem_DebugMalloc
+                       _PyMem_DebugRawMalloc
+                       _PyMem_DebugRawAlloc
+
+     0.99%     0.33%  python3.12-dbg  python3.12d       [.] _PyMem_DebugRawRealloc
+            |          
+             --0.66%--_PyMem_DebugRawRealloc
+
+     0.99%     0.99%  python3.12-dbg  python3.12d       [.] _PyThreadState_PushFrame
+            |          
+             --0.66%--py::Square.find:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+                       _PyEval_EvalFrameDefault
+                       PyObject_Vectorcall
+                       _PyObject_VectorcallTstate.lto_priv.2
+                       _PyFunction_Vectorcall
+                       _PyEval_Vector
+                       _PyEvalFramePushAndInit.lto_priv.0
+                       _PyThreadState_PushFrame
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_Malloc
+            |
+            ---_PyObject_Malloc
+               |          
+                --0.66%--PyMem_RawMalloc
+                          _PyMem_DebugRawMalloc
+                          _PyMem_DebugRawAlloc
+                          _PyMem_RawMalloc
+                          malloc
+                          _int_malloc
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] _PyFrame_ClearExceptCode
+            |
+            ---_PyFrame_ClearExceptCode
+               |          
+                --0.66%--_Py_DECREF_DecRefTotal
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] _PyLong_Add
+            |
+            ---_PyLong_Add
+               |          
+                --0.66%--_PyLong_FromMedium.lto_priv.0
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] gc_collect_with_callback
+            |
+            ---gc_collect_with_callback
+               gc_collect_main
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] Py_FinalizeEx
+            |
+            ---Py_FinalizeEx
+               |          
+                --0.66%--finalize_modules
+                          _PyGC_CollectNoFail
+                          gc_collect_main
+
+     0.99%     0.00%  python3.12-dbg  python3.12d       [.] long_dealloc.lto_priv.0
+            |
+            ---long_dealloc.lto_priv.0
+               PyObject_Free
+               _PyMem_DebugFree
+               |          
+                --0.66%--PyGILState_Check
+
+     0.99%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Board.score:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.66%  python3.12-dbg  libc.so.6         [.] unlink_chunk.constprop.0
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::UCTNode.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::UCTNode.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+               _PyList_AppendTakeRef.lto_priv.0
+               _PyList_AppendTakeRefListResize
+               list_resize.lto_priv.0
+               PyMem_Realloc
+               _PyMem_DebugRealloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] type_new_init
+            |
+            ---type_new_init
+               type_new_alloc
+               PyType_GenericAlloc
+               _PyType_AllocNoTrack
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyObject_Malloc
+               PyMem_RawMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::namedtuple:/usr/lib/python3.12/collections/__init__.py
+            |
+            ---py::namedtuple:/usr/lib/python3.12/collections/__init__.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] type_new_alloc
+            |
+            ---type_new_alloc
+               PyType_GenericAlloc
+               _PyType_AllocNoTrack
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyObject_Malloc
+               PyMem_RawMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.33%  python3.12-dbg  libc.so.6         [.] __memset_avx2_unaligned_erms
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyType_GenericAlloc
+            |
+            ---PyType_GenericAlloc
+               _PyType_AllocNoTrack
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyObject_Malloc
+               PyMem_RawMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _PyType_AllocNoTrack
+            |
+            ---_PyType_AllocNoTrack
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyObject_Malloc
+               PyMem_RawMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyCMethod_New
+            |
+            ---PyCMethod_New
+               _PyObject_GC_New
+               gc_alloc
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.reset:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::Board.reset:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.66%  python3.12-dbg  libc.so.6         [.] pthread_getspecific@@GLIBC_2.34
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _Py_HandlePending
+            |
+            ---_Py_HandlePending
+               _Py_RunGC
+               gc_collect_generations
+               gc_collect_with_callback
+               gc_collect_main
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_GetIter
+            |
+            ---PyObject_GetIter
+               list_iter.lto_priv.0
+               _PyObject_GC_New
+               gc_alloc
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _Py_RunGC
+            |
+            ---_Py_RunGC
+               gc_collect_generations
+               gc_collect_with_callback
+               gc_collect_main
+
+     0.66%     0.66%  python3.12-dbg  python3.12d       [.] tuple_alloc
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyMem_RawMalloc
+            |
+            ---PyMem_RawMalloc
+               _PyMem_DebugRawMalloc
+               _PyMem_DebugRawAlloc
+               _PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_GetAttr
+            |
+            ---PyObject_GetAttr
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] gc_collect_generations
+            |
+            ---gc_collect_generations
+               gc_collect_with_callback
+               gc_collect_main
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] list_iter.lto_priv.0
+            |
+            ---list_iter.lto_priv.0
+               _PyObject_GC_New
+               gc_alloc
+               PyObject_Malloc
+               _PyMem_DebugMalloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] listiter_dealloc.lto_priv.0
+            |
+            ---listiter_dealloc.lto_priv.0
+               PyObject_GC_Del
+               PyObject_Free
+               _PyMem_DebugFree
+               _PyMem_DebugRawFree
+               _PyMem_DebugCheckAddress
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_GC_Del
+            |
+            ---PyObject_GC_Del
+               PyObject_Free
+               _PyMem_DebugFree
+               _PyMem_DebugRawFree
+               _PyMem_DebugCheckAddress
+
+     0.66%     0.66%  python3.12-dbg  python3.12d       [.] _Py_CheckFunctionResult
+     0.66%     0.33%  python3.12-dbg  [JIT] tid 2158    [.] py::ZobristHash.add:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::ZobristHash.add:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyThread_acquire_lock
+            |
+            ---PyThread_acquire_lock
+               PyThread_acquire_lock_timed
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _PyLong_FromMedium.lto_priv.0
+            |
+            ---_PyLong_FromMedium.lto_priv.0
+
+     0.66%     0.33%  python3.12-dbg  python3.12d       [.] _PyType_Lookup
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyMem_Free
+            |
+            ---PyMem_Free
+               _PyMem_DebugFree
+               _PyMem_DebugRawFree
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] PyThread_acquire_lock_timed
+            |
+            ---PyThread_acquire_lock_timed
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_RawMalloc
+            |
+            ---_PyMem_RawMalloc
+               malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] finalize_modules
+            |
+            ---finalize_modules
+               _PyGC_CollectNoFail
+               gc_collect_main
+
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::ZobristHash.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::ZobristHash.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::ZobristHash.dupe:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::ZobristHash.dupe:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.00%  python3.12-dbg  libc.so.6         [.] malloc
+            |
+            ---malloc
+               _int_malloc
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _PyGC_CollectNoFail
+            |
+            ---_PyGC_CollectNoFail
+               gc_collect_main
+
+     0.66%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EmptySet.add:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+            |
+            ---py::EmptySet.add:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+               _PyEval_EvalFrameDefault
+
+     0.66%     0.00%  python3.12-dbg  python3.12d       [.] _PyTuple_FromArray
+            |
+            ---_PyTuple_FromArray
+               tuple_alloc
+
+     0.33%     0.33%  python3.12-dbg  [unknown]         [k] 0xffffffff8fac428a
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pymain_init
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] Py_InitializeFromConfig
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pyinit_main
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] init_interp_main
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyImport_InitExternal
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] init_importlib_external
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_CallMethod
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] callmethod
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_CallFunctionVa
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] import_name.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyImport_ImportModuleLevelObject
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] import_find_and_load
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyObject_CallMethodObjArgs
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] object_vacall
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyPegen_lookahead_with_int
+     0.33%     0.33%  python3.12-dbg  [unknown]         [k] 0xffffffff8fd3c192
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Popen.__init__:/usr/lib/python3.12/subprocess.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] builtin_exec.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] builtin_exec_impl.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyEval_EvalCode
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pymain_run_python
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pymain_run_file
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::<module>:/usr/local/lib/python3.12/dist-packages/pyperf/_system.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pymain_run_file_obj
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyRun_AnyFileObject
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] perf_map_write_entry.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyUnstable_WritePerfMapEntry
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyRun_SimpleFileObject
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] _IO_fflush
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] pyrun_file
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EnumType.__new__:/usr/lib/python3.12/enum.py
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] _IO_file_sync@@GLIBC_2.2.5
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyParser_ASTFromFile
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] _IO_do_write@@GLIBC_2.2.5
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyPegen_run_parser_from_file_pointer
+     0.33%     0.33%  python3.12-dbg  libc.so.6         [.] __strlen_avx2
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::<module>:/usr/lib/python3.12/importlib/resources/_adapters.py
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] _IO_file_write@@GLIBC_2.2.5
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyPegen_run_parser
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] __GI___libc_write
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyPegen_parse
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] cfunction_call.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] file_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff90400124
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] statements_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] tp_new_wrapper.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff9035004e
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::<module>:/usr/lib/python3.12/contextlib.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _loop1_3_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fa02007
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] pytime_as_timespec
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] statement_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fcef254
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] compound_stmt_rule
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fcef1c2
+     0.33%     0.33%  python3.12-dbg  libc.so.6         [.] clock_gettime@@GLIBC_2.17
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] class_def_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fcedc73
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] write_size_t
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] class_def_raw_rule
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fcecf3f
+     0.33%     0.33%  python3.12-dbg  [unknown]         [k] 0xffffffff8fae056d
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::PurePath.__init__:/usr/lib/python3.12/pathlib.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] block_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdadc1e
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] gc_list_size.lto_priv.0
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] untrack_dicts.lto_priv.0
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] validate_list.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdad5af
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyObject_Free
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyObject_IsFreed
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] code_dealloc.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_LoaderBasics.exec_module:<frozen importlib._bootstrap_external>
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fc5363e
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] read_size_t
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] visit_reachable
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_compile_bytecode:<frozen importlib._bootstrap_external>
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] builtin_eval.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdc392b
+     0.33%     0.33%  python3.12-dbg  libc.so.6         [.] __memmove_avx_unaligned_erms
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyTrash_get_state
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::SubPattern.getwidth:/usr/lib/python3.12/re/_parser.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyDict_SetItem
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyInit__datetime
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyType_Ready
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] builtin_eval_impl
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fd3bc34
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] PyObject_GC_UnTrack
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] PyUnstable_Code_GetExtra
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyDict_GetItem_KnownHash
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.useful_moves:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::UCTNode.best_child:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_proto_member.__set_name__:/usr/lib/python3.12/enum.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyModule_Create2
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyRun_StringFlags
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyDict_SetItem_Take2
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_Realloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] function_def_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] subtype_dealloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_new_init_subclass.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_ready
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fd2adfb
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::FileFinder._get_spec:<frozen importlib._bootstrap_external>
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyMem_RawRealloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyModule_CreateInitialized
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyObject_FreeInstanceAttributes
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] function_def_raw_rule
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] import_find_extension
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] insertdict
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] run_mod
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_ready_fill_dict
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdc4a77
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Pair.parse:/usr/lib/python3.12/importlib/metadata/_collections.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyModuleDef_Init
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyAST_Compile
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _extensions_cache_get
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] super_getattro.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_add_getset
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdc069b
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] PyNumber_Index
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _Py_NewReference
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] cfunction_vectorcall_NOARGS
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] set_add_entry
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::EmptySet.__init__:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Random.randrange:/usr/lib/python3.12/random.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyDescr_NewGetSet
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyImport_GetNextModuleIndex
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyMem_RawRealloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _Py_type_getattro
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] compiler_free.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] do_super_lookup
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] set_dealloc.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_new_set_attrs
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdc040b
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyType_GetDict
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] binary_op
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] float_dealloc.lto_priv.0
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] get_small_int.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_BlockingOnManager.__enter__:<frozen importlib._bootstrap>
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] realloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyErr_Occurred
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyGC_Collect
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _Py_type_getattro_impl
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _super_lookup_descr
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] allocate_from_new_pool
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] descr_new
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] subtract_refs.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] type_new_classmethod
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdbeddc
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff90400d88
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] PyObject_Size
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] PySequence_Contains
+     0.33%     0.33%  python3.12-dbg  python3.12d       [.] _PyDict_FromItems
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::<lambda>:/usr/lib/python3.12/socket.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::to_pos:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  libc.so.6         [.] _int_realloc
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyUnicode_InternFromString
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyTime_GetMonotonicClock
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] list_traverse.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] map_dealloc.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] move_unreachable.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] range_vectorcall.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] set_add.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fdbbc50
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff903520f3
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff90400c04
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::BatteryTime:/usr/local/lib/python3.12/dist-packages/psutil/_common.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::Board.random_move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::_find_spec:<frozen importlib._bootstrap>
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::computer_move:/usr/local/lib/python3.12/dist-packages/pyperformance/data-files/benchmarks/bm_go/run_benchmark.py
+     0.33%     0.00%  python3.12-dbg  [JIT] tid 2158    [.] py::get_terminal_size:/usr/lib/python3.12/shutil.py
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyNumber_TrueDivide
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] PyUnicode_FromString
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyTime_AsTimespec_clamp
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] _PyTrash_begin
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] dict_traverse.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] find_name_in_mro.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] py_get_monotonic_clock
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] range_from_array
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] set_add_key
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] simple_stmts_rule.lto_priv.0
+     0.33%     0.00%  python3.12-dbg  python3.12d       [.] visit_decref
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fae1083
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff8fd3c3d2
+     0.33%     0.00%  python3.12-dbg  [unknown]         [.] 0xffffffff9035258b
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
