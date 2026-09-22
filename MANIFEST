@@ -2,6 +2,8 @@
 
 name	metafile
 mdpoptimized	<local>
+gooptimized	<local>
 
 [group default]
 mdpoptimized
+gooptimized
