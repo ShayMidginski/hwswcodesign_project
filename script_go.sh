@@ -6,19 +6,23 @@ echo "====== Setting up dependencies ======"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 VENV_DIR="$SCRIPT_DIR/.venv"
+FLAMEGRAPH_DIR="$SCRIPT_DIR/.flamegraph"
 PYTHON_BIN="python3.12"
 DBG_PYTHON_BIN="python3.12-dbg"
-if command -v apt-get >/dev/null 2>&1; then
-    APT_PKGS=()
-    dpkg -s python3.12-venv >/dev/null 2>&1 || APT_PKGS+=(python3.12-venv)
-    command -v "$DBG_PYTHON_BIN" >/dev/null 2>&1 || APT_PKGS+=(python3.12-dbg)
-    if [ ${#APT_PKGS[@]} -gt 0 ]; then
-        echo "Installing missing system packages: ${APT_PKGS[*]}"
-        sudo apt-get update
-        sudo apt-get install -y "${APT_PKGS[@]}"
-    fi
-else
-    echo "WARNING: apt-get not found; ensure python3.12-venv and python3.12-dbg are installed manually" >&2
+APT_PKGS=()
+command -v "$PYTHON_BIN" >/dev/null 2>&1 || APT_PKGS+=(python3.12)
+dpkg -s python3.12-venv >/dev/null 2>&1 || APT_PKGS+=(python3.12-venv)
+command -v "$DBG_PYTHON_BIN" >/dev/null 2>&1 || APT_PKGS+=(python3.12-dbg)
+command -v git >/dev/null 2>&1 || APT_PKGS+=(git)
+command -v perf >/dev/null 2>&1 || APT_PKGS+=(linux-tools-common linux-tools-generic "linux-tools-$(uname -r)")
+if [ ${#APT_PKGS[@]} -gt 0 ]; then
+    echo "Installing missing system packages: ${APT_PKGS[*]}"
+    sudo apt-get update
+    sudo apt-get install -y "${APT_PKGS[@]}"
+fi
+if [ ! -d "$FLAMEGRAPH_DIR" ]; then
+    echo "Cloning FlameGraph to $FLAMEGRAPH_DIR"
+    git clone --depth 1 https://github.com/brendangregg/FlameGraph.git "$FLAMEGRAPH_DIR"
 fi
 if [ ! -d "$VENV_DIR" ]; then
     echo "Creating virtual environment at $VENV_DIR"
@@ -57,8 +61,8 @@ sudo -E perf record -F 99 -g --call-graph dwarf -e cpu-clock -o perf_single.data
 sudo perf report -g -i perf_single.data --no-inline > go_perf_report_312_single.txt
 echo "====== Single worker performance report saved to go_perf_report_312_single.txt ======"
 sudo perf script -i perf_single.data --no-inline > go_single.perf
-~/FlameGraph/stackcollapse-perf.pl go_single.perf > go_single.folded
-~/FlameGraph/flamegraph.pl go_single.folded > go_312_single_flamegraph.svg
+"$FLAMEGRAPH_DIR/stackcollapse-perf.pl" go_single.perf > go_single.folded
+"$FLAMEGRAPH_DIR/flamegraph.pl" go_single.folded > go_312_single_flamegraph.svg
 echo "====== Single worker flamegraph saved to go_312_single_flamegraph.svg ======"
 echo "====== Running GO benchmark with optimized code ======"
 pyperformance run --manifest "$SCRIPT_DIR/MANIFEST" -b gooptimized -o go_optimized_results.json
@@ -69,4 +73,3 @@ sudo -E perf record -F 99 -g --call-graph dwarf -e cpu-clock -- python3.12-dbg -
 sudo perf report --stdio --no-inline > go_perf_report_312_opt.txt
 echo "====== Optimized performance report saved to go_perf_report_312_opt.txt ======"
 echo "====== Running GO script done ======"
-    
