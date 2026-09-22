@@ -32,7 +32,8 @@ Profiling and optimizing **MDP** and **GO** pyperformance benchmarks.
 │   ├── mdp_perf_report_312*.txt
 │   └── mdp_312_single_flamegraph.svg
 ├── report_go.pdf             # Written report for the GO workload
-└── report_mdp.pdf            # Written report for the MDP workload
+├── report_mdp.pdf            # Written report for the MDP workload
+└── prompt.pdf                # Original assignment prompt
 ```
 
 ## Running the scripts
